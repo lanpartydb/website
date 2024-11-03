@@ -1,7 +1,7 @@
 # The OrgaTalk LAN Party Database
 
 This compiles a website from the [actual
-data](https://github.com/orgatalk/lanpartydb-data).
+data](https://github.com/lanpartydb/data).
 
 
 ## License

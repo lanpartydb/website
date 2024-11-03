@@ -24,7 +24,7 @@ classifiers = [
 ]
 
 [project.urls]
-Repository = "https://github.com/orgatalk/lanpartydb-website"
+Repository = "https://github.com/lanpartydb/website"
 
 [build-system]
 requires = ["hatchling"]
