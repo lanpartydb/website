@@ -32,7 +32,7 @@ jobs:
         run: uv sync
 
       - name: Download and extract database
-        run: wget -q -O - https://github.com/orgatalk/lanpartydb-data/raw/dist/data.tar.xz | tar xJf -
+        run: wget -q -O - https://github.com/lanpartydb/data/raw/dist/data.tar.xz | tar xJf -
 
       - name: Generate static website
         run: uv run flask freeze
