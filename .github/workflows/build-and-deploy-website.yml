@@ -10,11 +10,11 @@ on:
 
 jobs:
   build:
-    # Grant `GITHUB_TOKEN` the permissions required to make a Pages deployment.
+    # Grant `GITHUB_TOKEN` the necessary permissions.
     permissions:
-      contents: read
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      contents: write
+      deployments: write
+      pages: write
 
     runs-on: ubuntu-latest
 
