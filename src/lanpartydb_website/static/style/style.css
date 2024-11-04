@@ -200,9 +200,14 @@ table,
   padding-top: 3rem;
 }
 
+.site-header .site-logo {
+  height: 4rem;
+}
+
 .site-header .site-title {
   font-size: 2rem; /* 32px / 16px */
   line-height: 1.1;
+  margin-top: 0.125rem;
 }
 
 

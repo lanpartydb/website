@@ -11,8 +11,15 @@
 
     <header class="site-header">
       <div class="container">
-        <div class="site-title"><a href="{{ url_for('homepage.index') }}">The LAN Party Database</a></div>
-        <div class="site-subtitle">Remembering the good times.</div>
+        <div class="row">
+          <div>
+            <img class="site-logo" src="{{ url_for('static', filename='style/logo.png') }}">
+          </div>
+          <div>
+            <div class="site-title"><a href="{{ url_for('homepage.index') }}">The LAN Party Database</a></div>
+            <div class="site-subtitle">Remembering the good times.</div>
+          </div>
+        </div>
       </div>
     </header>
 
