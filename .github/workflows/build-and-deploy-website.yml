@@ -62,4 +62,5 @@ jobs:
         run: |
           git add index.html parties/ series/ static/ CNAME
           git commit -m 'Add static website'
+          git remote set-url origin git@github.com:lanpartydb/website.git
           git push --force origin gh-pages
