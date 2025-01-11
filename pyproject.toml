@@ -40,3 +40,6 @@ force-sort-within-sections = true
 forced-separate = [ "tests" ]
 lines-after-imports = 2
 order-by-type = false
+
+[tool.uv]
+required-version = ">=0.5.16"
