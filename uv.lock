@@ -24,7 +24,7 @@ name = "click"
 version = "8.1.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "colorama", marker = "platform_system == 'Windows'" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/96/d3/f04c7bfcf5c1862a2a5b845c6b2b360488cf47af55dfa79c98f6a6bf98b5/click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de", size = 336121 }
 wheels = [
@@ -118,14 +118,14 @@ wheels = [
 
 [[package]]
 name = "lanpartydb"
-version = "0.9.0"
+version = "0.9.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "tomlkit" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/66/e9/2be78e3ae0c8cc1bed57c37a46183429be25bff5650fa3bee8c134b78ed5/lanpartydb-0.9.0.tar.gz", hash = "sha256:9e2da0c546824330ca8a906c38b029edd0d80ea5d31eaad49866fee71fd1aa13", size = 8913 }
+sdist = { url = "https://files.pythonhosted.org/packages/00/08/10b1e26cac7fadd6101c931e46dda7a1a909ced4732437b87c1cb830cd65/lanpartydb-0.9.2.tar.gz", hash = "sha256:c60d62605136fe9dd8dee0b121d1fdd78104c42aff24a957d6a1d05783445046", size = 9557 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/bc/53/f97550a869cc69fc03d7f9e744a02a86d7e886d1c9fa7b6563488d25dc4d/lanpartydb-0.9.0-py3-none-any.whl", hash = "sha256:3e277ce2c48094a44efeb9074421623dcd5cf81e41cbf2e4f40f699b102aff9d", size = 4347 },
+    { url = "https://files.pythonhosted.org/packages/5a/53/69db74a4fe095b65e3c74bb463b0d0428d8226b429f5cd0dd53d96591e6c/lanpartydb-0.9.2-py3-none-any.whl", hash = "sha256:3cbc55b39235bb1c9cc332953449fa0f77bdbc897eb9ed2d5de3a08e44bb22f1", size = 5223 },
 ]
 
 [[package]]
@@ -147,7 +147,7 @@ requires-dist = [
     { name = "flask-babel", specifier = ">=4.0.0" },
     { name = "flask-paginate", specifier = ">=2024.4.12" },
     { name = "frozen-flask", specifier = ">=1.0.2" },
-    { name = "lanpartydb", specifier = ">=0.9.0" },
+    { name = "lanpartydb", specifier = ">=0.9.2" },
     { name = "pycountry", specifier = ">=24.6.1" },
 ]
 
