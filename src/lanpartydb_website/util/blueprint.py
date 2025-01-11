@@ -4,7 +4,7 @@ lanpartydb_website.util.blueprint
 
 Blueprint helpers
 
-:Copyright: 2024 Jochen Kupperschmidt
+:Copyright: 2024-2025 Jochen Kupperschmidt
 :License: MIT
 """
 
