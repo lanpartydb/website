@@ -38,12 +38,15 @@
 
 <div class="homepage-section">
   <div class="block">
-    <p>A bunch of people were so kind to discover, collect, validate, format, and submit data:</p>
+    <p>A bunch of people were so kind to provide, discover, seek, hunt, unearth, collect, clean up, format, validate, correct, enrich, and submit data:</p>
   </div>
-  <div class="row is-compact is-hcentered is-wrapping contributors">
+  <div class="block row is-compact is-hcentered is-wrapping contributors">
   {%- for contributor in data_contributors %}
     <img src="{{ contributor.github_avatar_url }}">
   {%- endfor %}
+  </div>
+  <div class="block">
+    <p>Very much appreciated, thank you so much! 🫶</p>
   </div>
 </div>
 
