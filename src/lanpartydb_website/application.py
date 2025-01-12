@@ -46,6 +46,7 @@ def _load_data(app: Flask) -> None:
 
     app.data_commit_hash = loader.load_commit_hash(data_path)
     app.data_timestamp = loader.load_timestamp(data_path)
+    app.data_contributors = loader.load_contributors(data_path)
 
     series_list = loader.load_series(data_path)
     parties = loader.load_parties(data_path)

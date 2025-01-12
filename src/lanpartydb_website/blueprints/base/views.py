@@ -22,5 +22,6 @@ def extend_template_context() -> dict[str, Any]:
     return {
         'data_commit_hash': current_app.data_commit_hash,
         'data_timestamp': current_app.data_timestamp,
+        'data_contributors': current_app.data_contributors,
         'now': datetime.now(UTC),
     }
