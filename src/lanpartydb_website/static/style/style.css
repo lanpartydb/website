@@ -188,6 +188,10 @@ table,
   justify-content: center;
 }
 
+.row.is-wrapping {
+  flex-wrap: wrap;
+}
+
 .row--space-between {
   justify-content: space-between;
 }
@@ -420,6 +424,17 @@ table.table--wide {
 }
 
 
+/* contributors */
+
+.contributors img {
+  --size: 64px;
+  border-radius: 50%;
+  display: block;
+  height: var(--size);
+  width: var(--size);
+}
+
+
 /* misc */
 
 .homepage-section:not(:last-child) {
@@ -436,10 +451,6 @@ table.table--wide {
 
 .nowrap {
   white-space: nowrap;
-}
-
-.contributors img {
-  display: block;
 }
 
 .text--centered {
