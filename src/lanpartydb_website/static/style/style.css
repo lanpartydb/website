@@ -142,7 +142,7 @@ table,
 :is(
   .block,
   table,
-).is-centered-h {
+).is-hcentered {
   margin-inline: auto;
   width: fit-content;
 }
