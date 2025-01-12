@@ -17,7 +17,7 @@
     <tr>
       <td><a href="{{ url_for('.view', slug=series.slug) }}">{{ series.name }}</a></td>
       <td>
-        <div class="row row--center is-compact">
+        <div class="row is-compact is-hcentered">
         {%- for country_code in series.country_codes %}
           {%- with country = countries.get(alpha_2=country_code) %}
           <div title="{{ country.name }}">{{ country.flag }}</div>
