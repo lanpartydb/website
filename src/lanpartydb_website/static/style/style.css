@@ -170,22 +170,22 @@ table,
   gap: 1rem;
 }
 
+.row.is-collapsible {
+  flex-direction: column;
+}
+
+@media (min-width: 48rem) {
+  .row.is-collapsible {
+    flex-direction: row;
+  }
+}
+
 .row.is-compact {
   gap: 0.5rem;
 }
 
 .row.is-hcentered {
   justify-content: center;
-}
-
-.row--collapsible {
-  flex-direction: column;
-}
-
-@media (min-width: 48rem) {
-  .row--collapsible {
-    flex-direction: row;
-  }
 }
 
 .row--space-between {
