@@ -32,6 +32,7 @@
         <nav>
           <ol>
           {%- for page_id, url, label in [
+            ('homepage', url_for('homepage.index'), _('Homepage')),
             ('parties', url_for('party.index'), _('Parties')),
             ('series', url_for('series.index'), _('Series')),
             ('countries', url_for('party.index_countries'), _('Countries')),
