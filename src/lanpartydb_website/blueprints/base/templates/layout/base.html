@@ -1,3 +1,6 @@
+{%- set raw_body_layout = raw_body_layout|default(false) %}
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -35,11 +38,15 @@
     </section>
 
     <main class="site-body">
+      {%- if not raw_body_layout %}
       <div class="body-section">
         <div class="container">
+      {%- endif %}
 {% block body required %}{% endblock %}
+      {%- if not raw_body_layout %}
         </div>
       </div>
+      {%- endif %}
     </main>
 
     <footer class="site-footer">
