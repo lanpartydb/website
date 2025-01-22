@@ -1,60 +1,79 @@
 {% extends 'layout/base.html' %}
+{% set raw_body_layout = true %}
 
 {% block body %}
 
-<div class="homepage-section">
-  <p class="text--centered">This is a database of <strong>past, public LAN parties</strong>.</p>
-</div>
+<div class="body-section">
+  <div class="container">
 
-<div class="homepage-section">
-  <div class="block is-hcentered">
-    <p class="text--centered">So far, it covers:</p>
-    <div class="row is-collapsible is-hcentered" style="gap: 1.5rem 3rem;">
-      <div class="column text--centered">
-        <a href="{{ url_for('party.index') }}">
-          <div class="bignumber">{{ party_count }}</div>
-          <div class="bignumber-caption">parties</div>
-        </a>
-      </div>
-      <div class="column text--centered">
-        <a href="{{ url_for('series.index') }}">
-          <div class="bignumber">{{ series_count }}</div>
-          <div class="bignumber-caption">party series</div>
-        </a>
-      </div>
-      <div class="column text--centered">
-        <a href="{{ url_for('party.index_countries') }}">
-          <div class="bignumber">{{ country_count }}</div>
-          <div class="bignumber-caption">countries</div>
-        </a>
+    <div class="homepage-section">
+      <p class="text--centered">This is a database of <strong>past, public LAN parties</strong>.</p>
+    </div>
+
+    <div class="homepage-section">
+      <div class="block is-hcentered">
+        <p class="text--centered">So far, it covers:</p>
+        <div class="row is-collapsible is-hcentered" style="gap: 1.5rem 3rem;">
+          <div class="column text--centered">
+            <a href="{{ url_for('party.index') }}">
+              <div class="bignumber">{{ party_count }}</div>
+              <div class="bignumber-caption">parties</div>
+            </a>
+          </div>
+          <div class="column text--centered">
+            <a href="{{ url_for('series.index') }}">
+              <div class="bignumber">{{ series_count }}</div>
+              <div class="bignumber-caption">party series</div>
+            </a>
+          </div>
+          <div class="column text--centered">
+            <a href="{{ url_for('party.index_countries') }}">
+              <div class="bignumber">{{ country_count }}</div>
+              <div class="bignumber-caption">countries</div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 </div>
 
-<div class="homepage-section">
-  <div class="block">
-    <p>A bunch of people were so kind to provide, discover, seek, hunt, unearth, collect, clean up, format, validate, correct, enrich, and submit data:</p>
-  </div>
-  <div class="block row is-compact is-hcentered is-wrapping contributors">
-  {%- for contributor in data_contributors %}
-    <img src="{{ contributor.github_avatar_url }}">
-  {%- endfor %}
-  </div>
-  <div class="block">
-    <p>Very much appreciated, thank you so much! 🫶</p>
+<div class="body-section">
+  <div class="container">
+
+    <div class="homepage-section">
+      <div class="block">
+        <p>A bunch of people were so kind to provide, discover, seek, hunt, unearth, collect, clean up, format, validate, correct, enrich, and submit data:</p>
+      </div>
+      <div class="block row is-compact is-hcentered is-wrapping contributors">
+      {%- for contributor in data_contributors %}
+        <img src="{{ contributor.github_avatar_url }}">
+      {%- endfor %}
+      </div>
+      <div class="block">
+        <p>Very much appreciated, thank you so much! 🫶</p>
+      </div>
+    </div>
+
+    <div class="homepage-section">
+      <div class="block">
+        <p>See the <a href="https://github.com/lanpartydb/data/blob/main/CONTRIBUTING.md">contribution guide</a> to learn how you can help improving this database by adding more parties.</p>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<div class="homepage-section">
-  <div class="block">
-    <p>See the <a href="https://github.com/lanpartydb/data/blob/main/CONTRIBUTING.md">contribution guide</a> to learn how you can help improving this database by adding more parties.</p>
-  </div>
-</div>
+<div class="body-section">
+  <div class="container">
 
-<div class="homepage-section">
-  <div class="block">
-    <p>There is also a list of <a href="https://corona-effekt.orgatalk.de/">parties that were cancelled because of the COVID-19 pandemic</a>.</p>
+    <div class="homepage-section">
+      <div class="block">
+        <p>There is also a list of <a href="https://corona-effekt.orgatalk.de/">parties that were cancelled because of the COVID-19 pandemic</a>.</p>
+      </div>
+    </div>
+
   </div>
 </div>
 
