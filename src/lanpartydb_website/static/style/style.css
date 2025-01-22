@@ -247,7 +247,11 @@ a:not(:hover) {
 }
 
 .body-section {
-  padding-block: 2rem;
+  padding-block: 3rem;
+}
+
+.body-section:nth-of-type(even) {
+  background-color: var(--color-darker);
 }
 
 
@@ -443,10 +447,6 @@ table.table--wide {
 
 
 /* misc */
-
-.homepage-section:not(:last-child) {
-  margin-block-end: 3rem;
-}
 
 .breadcrumbs {
   margin-bottom: -1rem;
