@@ -252,7 +252,7 @@ a:not(:hover) {
 }
 
 .body-section {
-  padding-block: 3rem;
+  padding-block: 4rem;
 }
 
 .body-section:nth-of-type(even) {
