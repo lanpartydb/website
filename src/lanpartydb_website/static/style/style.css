@@ -244,9 +244,12 @@ a:not(:hover) {
 
 .site-body {
   background-color: var(--color-dark);
-  padding-bottom: 2rem;
-  padding-top: 2rem;
 }
+
+.body-section {
+  padding-block: 2rem;
+}
+
 
 /* footer */
 
