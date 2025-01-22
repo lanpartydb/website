@@ -204,7 +204,7 @@ a:not(:hover) {
 /* header */
 
 .site-header {
-  padding-bottom: 4rem;
+  padding-bottom: 1.5rem;
   padding-top: 3rem;
 }
 
@@ -237,7 +237,7 @@ a:not(:hover) {
 .nav-item {
   color: var(--color-text);
   display: block;
-  padding: 1rem 0.25rem;
+  padding-block: 1rem;
 }
 
 .nav-item.is-current {
