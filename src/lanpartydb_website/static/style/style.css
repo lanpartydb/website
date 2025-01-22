@@ -130,11 +130,15 @@ a:not(:hover) {
   }
 }
 
+:is(
+  h1,
+  h2,
+  table,
+  .block,
+):not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 
-h1,
-h2,
-table,
-.block,
 .data-value {
   margin-bottom: 1.5rem;
 }
