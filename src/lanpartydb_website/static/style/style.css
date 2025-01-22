@@ -239,6 +239,10 @@ a:not(:hover) {
   padding: 1rem 0.25rem;
 }
 
+.nav-item.is-current {
+  color: var(--color-accent);
+}
+
 
 /* body */
 

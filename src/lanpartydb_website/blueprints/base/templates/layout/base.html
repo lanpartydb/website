@@ -1,3 +1,4 @@
+{%- set current_page = current_page|default -%}
 {%- set raw_body_layout = raw_body_layout|default(false) %}
 
 
@@ -30,12 +31,12 @@
       <div class="container">
         <nav>
           <ol>
-          {%- for url, label in [
-            (url_for('party.index'), _('Parties')),
-            (url_for('series.index'), _('Series')),
-            (url_for('party.index_countries'), _('Countries')),
+          {%- for page_id, url, label in [
+            ('parties', url_for('party.index'), _('Parties')),
+            ('series', url_for('series.index'), _('Series')),
+            ('countries', url_for('party.index_countries'), _('Countries')),
           ] %}
-            <li><a class="nav-item" href="{{ url }}">{{ label }}</a></li>
+          <li><a class="nav-item {% if current_page == page_id %} is-current{% endif %}" href="{{ url }}">{{ label }}</a></li>
           {%- endfor %}
           </ol>
         </nav>
