@@ -209,7 +209,8 @@ a:not(:hover) {
 }
 
 .site-header .site-logo {
-  height: 4rem;
+  height: auto;
+  width: 3.5rem;
 }
 
 .site-header .site-title {
