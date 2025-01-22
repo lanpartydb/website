@@ -36,9 +36,16 @@
     <div class="data-label">{{ _('Location') }}</div>
     <div class="data-value">
       {%- with location = party.location %}
-        {{ location.name }}<br>
-        {{ location.street }}<br>
-        {{ location.zip_code }} {{ location.city }}<br>
+        {%- if location.name %}
+          {{ location.name }}<br>
+        {%- endif %}
+        {%- if location.street %}
+          {{ location.street }}<br>
+        {%- endif %}
+        {%- if location.zip_code %}
+          {{ location.zip_code }}
+        {%- endif %}
+          {{ location.city }}<br>
         {%- if country %}
           {{ country.flag }} {{ country.name }}
         {%- else %}
