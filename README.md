@@ -6,9 +6,9 @@ data](https://github.com/lanpartydb/data).
 
 ## Run Development Server
 
-.. code-block:: console
-
-    $ uv run flask run
+```console
+$ uv run flask run
+```
 
 
 ## License
