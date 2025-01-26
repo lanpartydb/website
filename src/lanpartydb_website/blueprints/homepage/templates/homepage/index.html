@@ -41,7 +41,7 @@
     </div>
     <div class="block row is-compact is-hcentered is-wrapping contributors">
     {%- for contributor in data_contributors %}
-      <img src="{{ contributor.github_avatar_url }}">
+      <img src="{{ contributor.github_avatar_url }}" title="{{ contributor.github_login }}">
     {%- endfor %}
     </div>
     <div class="block">
