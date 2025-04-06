@@ -119,14 +119,14 @@ wheels = [
 
 [[package]]
 name = "lanpartydb"
-version = "0.9.2"
+version = "0.10.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "tomlkit" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/00/08/10b1e26cac7fadd6101c931e46dda7a1a909ced4732437b87c1cb830cd65/lanpartydb-0.9.2.tar.gz", hash = "sha256:c60d62605136fe9dd8dee0b121d1fdd78104c42aff24a957d6a1d05783445046", size = 9557 }
+sdist = { url = "https://files.pythonhosted.org/packages/fa/e8/d50f6d3e79278fe7d2261c35e68efa32a358a06722b2a7204d34bea58d22/lanpartydb-0.10.0.tar.gz", hash = "sha256:1f74277c361c6ed2ac26b65d9b367ff4dac7b7b22563b927f68bf134a651b24c", size = 9609 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5a/53/69db74a4fe095b65e3c74bb463b0d0428d8226b429f5cd0dd53d96591e6c/lanpartydb-0.9.2-py3-none-any.whl", hash = "sha256:3cbc55b39235bb1c9cc332953449fa0f77bdbc897eb9ed2d5de3a08e44bb22f1", size = 5223 },
+    { url = "https://files.pythonhosted.org/packages/d6/fa/e4970b46dc5cd94a08fb961e3d59204344e12328e4af18bec9d89dc28543/lanpartydb-0.10.0-py3-none-any.whl", hash = "sha256:e6cb93882090c05fdfbda3f1e22414d5e343342e997f989665f1d98defc94e74", size = 5235 },
 ]
 
 [[package]]
@@ -148,7 +148,7 @@ requires-dist = [
     { name = "flask-babel", specifier = ">=4.0.0" },
     { name = "flask-paginate", specifier = ">=2024.4.12" },
     { name = "frozen-flask", specifier = ">=1.0.2" },
-    { name = "lanpartydb", specifier = ">=0.9.2" },
+    { name = "lanpartydb", specifier = ">=0.10.0" },
     { name = "pycountry", specifier = ">=24.6.1" },
 ]
 
