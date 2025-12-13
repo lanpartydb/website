@@ -58,4 +58,4 @@ def load_series(data_path: Path) -> list[Series]:
 def load_parties(data_path: Path) -> list[Party]:
     path = data_path / 'parties'
     filenames = path.glob('**/*.toml')
-    return list(map(deserialize_party_from_toml_file, filenames))
+    return [deserialize_party_from_toml_file(fn) for fn in filenames]
