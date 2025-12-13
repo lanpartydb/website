@@ -60,7 +60,8 @@ def _load_data(app: Flask) -> None:
             party_counts_by_series_slug[party.series_slug] += 1
 
     app.series_and_party_counts = [
-        (series, party_counts_by_series_slug[series.slug]) for series in series_list
+        (series, party_counts_by_series_slug[series.slug])
+        for series in series_list
     ]
 
     parties_by_slug = {party.slug: party for party in parties}

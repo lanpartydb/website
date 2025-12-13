@@ -37,5 +37,7 @@ def _count_series() -> int:
 
 def _count_countries() -> int:
     parties = list(current_app.parties_by_slug.values())
-    country_codes = {party.location.country_code for party in parties if party.location}
+    country_codes = {
+        party.location.country_code for party in parties if party.location
+    }
     return len(country_codes)
