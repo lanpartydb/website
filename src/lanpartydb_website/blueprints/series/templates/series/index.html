@@ -16,7 +16,7 @@
   <tbody>
     {%- for series, party_count in series_and_party_counts %}
     <tr>
-      <td><a href="{{ url_for('.view', slug=series.slug) }}">{{ series.name }}</a></td>
+      <td><a href="{{ url_for('.view', slug=series.slug) }}">{{ series.title }}</a></td>
       <td>
         <div class="row is-compact is-hcentered">
         {%- for country_code in series.country_codes %}

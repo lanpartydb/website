@@ -81,7 +81,7 @@
 
 {%- if series %}
 <div class="data-label">{{ _('Part of series') }}</div>
-<div class="data-value"><a href="{{ url_for('series.view', slug=series.slug) }}">{{ series.name }}</a></div>
+<div class="data-value"><a href="{{ url_for('series.view', slug=series.slug) }}">{{ series.title }}</a></div>
 {%- endif %}
 
 {%- endblock %}

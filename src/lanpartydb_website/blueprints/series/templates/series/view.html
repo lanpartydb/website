@@ -4,11 +4,11 @@
 {% block body %}
 
 <div class="breadcrumbs"><a href="{{ url_for('.index') }}">{{ _('Series') }}</a> /</div>
-<h1>{{ series.name }}</h1>
+<h1>{{ series.title }}</h1>
 
-{%- if series.alternative_names %}
+{%- if series.alternative_titles %}
 <div class="data-label">{{ _('Alternative Names') }}</div>
-<div class="data-value">{{ series.alternative_names|join(', ') }}</div>
+<div class="data-value">{{ series.alternative_titles|join(', ') }}</div>
 {%- endif %}
 
 {%- if parties %}

@@ -120,14 +120,14 @@ wheels = [
 
 [[package]]
 name = "lanpartydb"
-version = "0.10.0"
+version = "0.11.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "tomlkit" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/fa/e8/d50f6d3e79278fe7d2261c35e68efa32a358a06722b2a7204d34bea58d22/lanpartydb-0.10.0.tar.gz", hash = "sha256:1f74277c361c6ed2ac26b65d9b367ff4dac7b7b22563b927f68bf134a651b24c", size = 9609, upload-time = "2025-04-04T11:40:25.333Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/04/ef/9bb9cadbd48064f1d17ba8180e82c87c8a066fb8b22fbb3cce532bf80883/lanpartydb-0.11.1.tar.gz", hash = "sha256:922b95b53721b8f4f8643cf9a47afac2777ba6974f48eb3f5bec682bc5a7c7c3", size = 11307, upload-time = "2025-12-13T02:26:18.815Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d6/fa/e4970b46dc5cd94a08fb961e3d59204344e12328e4af18bec9d89dc28543/lanpartydb-0.10.0-py3-none-any.whl", hash = "sha256:e6cb93882090c05fdfbda3f1e22414d5e343342e997f989665f1d98defc94e74", size = 5235, upload-time = "2025-04-04T11:40:24.36Z" },
+    { url = "https://files.pythonhosted.org/packages/86/d2/8377522ab3b5b133e61f2fe10f3b6a1c1cdb5e57578369ac3529d0bc80f8/lanpartydb-0.11.1-py3-none-any.whl", hash = "sha256:34d9a3537c2c878a8f20d09e68fb45040f8f58dc2157c9edf9683d4a0b053b62", size = 5581, upload-time = "2025-12-13T02:26:17.361Z" },
 ]
 
 [[package]]
@@ -149,7 +149,7 @@ requires-dist = [
     { name = "flask-babel", specifier = ">=4.0.0" },
     { name = "flask-paginate", specifier = ">=2024.4.12" },
     { name = "frozen-flask", specifier = ">=1.0.2" },
-    { name = "lanpartydb", specifier = ">=0.10.0" },
+    { name = "lanpartydb", specifier = ">=0.11.1" },
     { name = "pycountry", specifier = ">=24.6.1" },
 ]
 
@@ -221,11 +221,11 @@ wheels = [
 
 [[package]]
 name = "tomlkit"
-version = "0.13.2"
+version = "0.13.3"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/b1/09/a439bec5888f00a54b8b9f05fa94d7f901d6735ef4e55dcec9bc37b5d8fa/tomlkit-0.13.2.tar.gz", hash = "sha256:fff5fe59a87295b278abd31bec92c15d9bc4a06885ab12bcea52c71119392e79", size = 192885, upload-time = "2024-08-14T08:19:41.488Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/cc/18/0bbf3884e9eaa38819ebe46a7bd25dcd56b67434402b66a58c4b8e552575/tomlkit-0.13.3.tar.gz", hash = "sha256:430cf247ee57df2b94ee3fbe588e71d362a941ebb545dec29b53961d61add2a1", size = 185207, upload-time = "2025-06-05T07:13:44.947Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f9/b6/a447b5e4ec71e13871be01ba81f5dfc9d0af7e473da256ff46bc0e24026f/tomlkit-0.13.2-py3-none-any.whl", hash = "sha256:7a974427f6e119197f670fbbbeae7bef749a6c14e793db934baefc1b5f03efde", size = 37955, upload-time = "2024-08-14T08:19:40.05Z" },
+    { url = "https://files.pythonhosted.org/packages/bd/75/8539d011f6be8e29f339c42e633aae3cb73bffa95dd0f9adec09b9c58e85/tomlkit-0.13.3-py3-none-any.whl", hash = "sha256:c89c649d79ee40629a9fda55f8ace8c6a1b42deb912b2a8fd8d942ddadb606b0", size = 38901, upload-time = "2025-06-05T07:13:43.546Z" },
 ]
 
 [[package]]

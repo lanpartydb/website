@@ -14,9 +14,9 @@ import json
 from pathlib import Path
 
 from lanpartydb.models import Party, Series
-from lanpartydb.reading import (
-    read_party_from_toml_file,
-    read_series_list_from_toml_file,
+from lanpartydb.deserialization import (
+    deserialize_party_from_toml_file,
+    deserialize_series_list_from_toml_file,
 )
 
 from .models import Contributor
@@ -52,10 +52,10 @@ def load_contributors(data_path: Path) -> list[Contributor]:
 
 def load_series(data_path: Path) -> list[Series]:
     filename = data_path / 'series.toml'
-    return read_series_list_from_toml_file(filename)
+    return deserialize_series_list_from_toml_file(filename)
 
 
 def load_parties(data_path: Path) -> list[Party]:
     parties_path = data_path / 'parties'
     party_filenames = parties_path.glob('**/*.toml')
-    return list(map(read_party_from_toml_file, party_filenames))
+    return list(map(deserialize_party_from_toml_file, party_filenames))
