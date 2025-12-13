@@ -17,4 +17,19 @@
 <div class="block is-hcentered">{{ parties|length }} items</div>
 {%- endif %}
 
+{%- if series.links and series.links.website %}
+  {%- with website = series.links.website %}
+<h2>{{ _('Links') }}</h2>
+
+<div class="data-label">{{ _('Website') }}</div>
+<div class="data-value">
+    {%- if not website.offline %}
+  <a href="{{ website.url }}">{{ website.url }}</a>
+    {%- else %}
+  {{ website.url }} <small class="dim">(offline)</small>
+    {%- endif %}
+</div>
+  {%- endwith %}
+{%- endif %}
+
 {%- endblock %}
