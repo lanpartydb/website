@@ -12,9 +12,8 @@
 {%- endif %}
 
 {%- if parties %}
-<h2>{{ _('Parties') }}</h2>
+<h2>{{ _('Parties') }} <small>{{ parties|length }}</small></h2>
 {% include 'party/_list.html' %}
-<div class="block is-hcentered">{{ parties|length }} items</div>
 {%- endif %}
 
 {%- if series.links and series.links.website %}
