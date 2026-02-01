@@ -33,7 +33,10 @@
   </div>
   <div>
 
-    {%- if party.location %}
+    {%- if party.online %}
+    <div class="data-label">{{ _('Location') }}</div>
+    <div class="data-value">🌐 online</div>
+    {%- elif party.location %}
     <div class="data-label">{{ _('Location') }}</div>
     <div class="data-value">
       {%- with location = party.location %}
