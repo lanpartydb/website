@@ -16,8 +16,8 @@
     {%- for country, party_count in countries_with_party_count|sort(attribute='0.name') %}
     <tr>
       <td>{{ country.flag }}</td>
-      <td><a href="{{ url_for('party.index_by_country', country_code=country.alpha_2.lower()) }}">{{ country.name }}</a></td>
-      <td class="number">{{ party_count }}</td>
+      <td>{{ country.name }}</td>
+      <td class="number"><a href="{{ url_for('party.index_by_country', country_code=country.alpha_2.lower()) }}">{{ party_count }}</a></td>
     </tr>
     {%- endfor %}
   </tbody>
