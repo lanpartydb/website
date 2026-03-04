@@ -35,7 +35,7 @@
             ('homepage', url_for('homepage.index'), _('Homepage')),
             ('parties', url_for('party.index'), _('Parties')),
             ('series', url_for('series.index'), _('Series')),
-            ('countries', url_for('party.index_countries'), _('Countries')),
+            ('countries', url_for('country.index'), _('Countries')),
           ] %}
           <li><a class="nav-item {% if current_page == page_id %} is-current{% endif %}" href="{{ url }}">{{ label }}</a></li>
           {%- endfor %}

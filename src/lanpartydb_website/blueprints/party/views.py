@@ -6,8 +6,6 @@ lanpartydb_website.blueprints.party.views
 :License: MIT
 """
 
-from collections import Counter
-
 from flask import abort, current_app, request
 from flask_paginate import Pagination
 from lanpartydb.models import Party
@@ -39,26 +37,6 @@ def index(page: int):
         'parties': parties_slice,
         'pagination': pagination,
         'countries': countries,
-    }
-
-
-@blueprint.get('/-/by-country/')
-@templated
-def index_countries():
-    counter = Counter()
-    for party in _get_parties():
-        if party.location:
-            counter[party.location.country_code] += 1
-
-    country_codes_with_party_count = list(counter.items())
-
-    countries_with_party_count = [
-        (_find_country(country_code), party_count)
-        for country_code, party_count in country_codes_with_party_count
-    ]
-
-    return {
-        'countries_with_party_count': countries_with_party_count,
     }
 
 

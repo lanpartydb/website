@@ -3,7 +3,7 @@
 
 {% block body %}
 
-<div class="breadcrumbs"><a href="{{ url_for('.index_countries') }}">{{ 'Countries' }}</a> /</div>
+<div class="breadcrumbs"><a href="{{ url_for('country.index') }}">{{ 'Countries' }}</a> /</div>
 <h1>{{ country.flag }} {{ country.name }} <small>{{ pagination.total }}</small></h1>
 
 {% include 'party/_list.html' %}

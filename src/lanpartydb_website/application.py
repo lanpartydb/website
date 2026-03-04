@@ -14,6 +14,7 @@ from flask_babel import Babel
 import jinja2
 
 from .blueprints.base.views import blueprint as base_blueprint
+from .blueprints.country.views import blueprint as country_blueprint
 from .blueprints.homepage.views import blueprint as homepage_blueprint
 from .blueprints.party.views import blueprint as party_blueprint
 from .blueprints.series.views import blueprint as series_blueprint
@@ -30,6 +31,7 @@ def create_app() -> Flask:
     Babel(app)
 
     app.register_blueprint(base_blueprint)
+    app.register_blueprint(country_blueprint)
     app.register_blueprint(homepage_blueprint)
     app.register_blueprint(party_blueprint)
     app.register_blueprint(series_blueprint)
