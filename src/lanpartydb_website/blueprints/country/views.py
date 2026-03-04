@@ -38,10 +38,12 @@ def index():
         if party.location:
             counter[party.location.country_code] += 1
 
-    country_codes_with_party_count = list(counter.items())
+    party_counts_by_country_code = dict(counter.items())
+
+    country_codes = set(party_counts_by_country_code.keys())
 
     countries_with_counts = []
-    for country_code, party_count in country_codes_with_party_count:
+    for country_code in country_codes:
         country = _find_country(country_code)
 
         countries_with_counts.append(
@@ -49,7 +51,7 @@ def index():
                 name=country.name,
                 code=country.alpha_2.lower(),
                 flag=country.flag,
-                party_count=party_count,
+                party_count=party_counts_by_country_code[country_code],
             )
         )
 
