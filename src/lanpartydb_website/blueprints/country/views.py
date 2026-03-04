@@ -7,6 +7,7 @@ lanpartydb_website.blueprints.country.views
 """
 
 from collections import Counter
+from dataclasses import dataclass
 
 from flask import abort, current_app, request
 from flask_paginate import Pagination
@@ -21,6 +22,14 @@ from ...util.templating import templated
 blueprint = create_blueprint('country', __name__, url_prefix='/countries')
 
 
+@dataclass(frozen=True, slots=True)
+class CountryWithCounts:
+    name: str
+    code: str
+    flag: str
+    party_count: int
+
+
 @blueprint.get('/')
 @templated
 def index():
@@ -31,13 +40,21 @@ def index():
 
     country_codes_with_party_count = list(counter.items())
 
-    countries_with_party_count = [
-        (_find_country(country_code), party_count)
-        for country_code, party_count in country_codes_with_party_count
-    ]
+    countries_with_counts = []
+    for country_code, party_count in country_codes_with_party_count:
+        country = _find_country(country_code)
+
+        countries_with_counts.append(
+            CountryWithCounts(
+                name=country.name,
+                code=country.alpha_2.lower(),
+                flag=country.flag,
+                party_count=party_count,
+            )
+        )
 
     return {
-        'countries_with_party_count': countries_with_party_count,
+        'countries_with_counts': countries_with_counts,
     }
 
 

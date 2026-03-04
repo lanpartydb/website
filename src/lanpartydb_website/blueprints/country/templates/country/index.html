@@ -3,7 +3,7 @@
 
 {% block body %}
 
-<h1>{{ _('Countries') }} <small>{{ countries_with_party_count|length }}</small></h1>
+<h1>{{ _('Countries') }} <small>{{ countries_with_counts|length }}</small></h1>
 
 <table class="table--index is-hcentered">
   <thead>
@@ -13,11 +13,11 @@
     </tr>
   </thead>
   <tbody>
-    {%- for country, party_count in countries_with_party_count|sort(attribute='0.name') %}
+    {%- for country in countries_with_counts|sort(attribute='name') %}
     <tr>
       <td>{{ country.flag }}</td>
       <td>{{ country.name }}</td>
-      <td class="number"><a href="{{ url_for('party.index_by_country', country_code=country.alpha_2.lower()) }}">{{ party_count }}</a></td>
+      <td class="number"><a href="{{ url_for('party.index_by_country', country_code=country.code) }}">{{ country.party_count }}</a></td>
     </tr>
     {%- endfor %}
   </tbody>
