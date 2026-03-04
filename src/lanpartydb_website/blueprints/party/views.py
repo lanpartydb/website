@@ -73,8 +73,9 @@ def index_by_country(country_code: str, page: int):
 
     parties = _get_parties()
     parties = filter(
-        lambda party: _find_party_country_code(party)
-        == country.alpha_2.lower(),
+        lambda party: (
+            _find_party_country_code(party) == country.alpha_2.lower()
+        ),
         parties,
     )
     parties = list(
