@@ -33,12 +33,7 @@ class CountryWithCounts:
 @blueprint.get('/')
 @templated
 def index():
-    counter = Counter()
-    for party in _get_parties():
-        if party.location:
-            counter[party.location.country_code] += 1
-
-    party_counts_by_country_code = dict(counter.items())
+    party_counts_by_country_code = _get_party_counts_by_country_code()
 
     country_codes = set(party_counts_by_country_code.keys())
 
@@ -58,6 +53,16 @@ def index():
     return {
         'countries_with_counts': countries_with_counts,
     }
+
+
+def _get_party_counts_by_country_code() -> dict[str, int]:
+    counter = Counter()
+
+    for party in _get_parties():
+        if party.location:
+            counter[party.location.country_code] += 1
+
+    return dict(counter.items())
 
 
 def _get_parties() -> list[Party]:
