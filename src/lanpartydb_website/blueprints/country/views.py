@@ -58,11 +58,9 @@ def index():
 def _get_party_counts_by_country_code() -> dict[str, int]:
     parties = list(current_app.parties_by_slug.values())
 
-    counter = Counter()
-
-    for party in parties:
-        if party.location:
-            counter[party.location.country_code] += 1
+    counter = Counter(
+        party.location.country_code for party in parties if party.location
+    )
 
     return dict(counter.items())
 
