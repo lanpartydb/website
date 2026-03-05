@@ -9,6 +9,7 @@
   <thead>
     <tr>
       <th colspan="2">{{ _('Country') }}</th>
+      <th class="number">{{ _('Series') }}</th>
       <th class="number">{{ _('Parties') }}</th>
     </tr>
   </thead>
@@ -17,6 +18,7 @@
     <tr>
       <td>{{ country.flag }}</td>
       <td>{{ country.name }}</td>
+      <td class="number">{{ country.series_count }}</td>
       <td class="number"><a href="{{ url_for('party.index_by_country', country_code=country.code) }}">{{ country.party_count }}</a></td>
     </tr>
     {%- endfor %}

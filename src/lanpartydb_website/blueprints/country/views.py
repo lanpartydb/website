@@ -27,12 +27,14 @@ class CountryWithCounts:
     name: str
     code: str
     flag: str
+    series_count: int
     party_count: int
 
 
 @blueprint.get('/')
 @templated
 def index():
+    series_counts_by_country_code = _get_series_counts_by_country_code()
     party_counts_by_country_code = _get_party_counts_by_country_code()
 
     country_codes = set(party_counts_by_country_code.keys())
@@ -46,6 +48,7 @@ def index():
                 name=country.name,
                 code=country.alpha_2.lower(),
                 flag=country.flag,
+                series_count=series_counts_by_country_code[country_code],
                 party_count=party_counts_by_country_code[country_code],
             )
         )
@@ -53,6 +56,18 @@ def index():
     return {
         'countries_with_counts': countries_with_counts,
     }
+
+
+def _get_series_counts_by_country_code() -> dict[str, int]:
+    series_list = list(current_app.series_by_slug.values())
+
+    counter = Counter(
+        country_code
+        for series in series_list
+        for country_code in series.country_codes
+    )
+
+    return dict(counter.items())
 
 
 def _get_party_counts_by_country_code() -> dict[str, int]:
