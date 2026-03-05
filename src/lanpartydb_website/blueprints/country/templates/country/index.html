@@ -18,7 +18,7 @@
     <tr>
       <td>{{ country.flag }}</td>
       <td>{{ country.name }}</td>
-      <td class="number">{{ country.series_count }}</td>
+      <td class="number"><a href="{{ url_for('series.index_by_country', country_code=country.code) }}">{{ country.series_count }}</a></td>
       <td class="number"><a href="{{ url_for('party.index_by_country', country_code=country.code) }}">{{ country.party_count }}</a></td>
     </tr>
     {%- endfor %}
