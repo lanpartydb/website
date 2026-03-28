@@ -12,7 +12,7 @@ dependencies = [
     "flask-babel>=4.0.0",
     "flask-paginate>=2024.04.12",
     "frozen-flask>=1.0.2",
-    "lanpartydb>=0.11.1",
+    "lanpartydb>=0.12.2",
     "pycountry>=26.2.16",
 ]
 license = "MIT"
