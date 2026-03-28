@@ -40,6 +40,27 @@ def index_by_date(page: int):
     }
 
 
+@blueprint.get('/-/by-title/', defaults={'page': 1})
+@blueprint.get('/-/by-title/pages/<int:page>/')
+@templated
+def index_by_title(page: int):
+    per_page = request.args.get('per_page', type=int, default=50)
+    offset = (page - 1) * per_page
+
+    parties = _get_parties()
+    parties.sort(key=lambda party: party.title.lower())
+
+    pagination = Pagination(page=page, per_page=per_page, total=len(parties))
+
+    parties_slice = parties[offset : offset + per_page]
+
+    return {
+        'parties': parties_slice,
+        'pagination': pagination,
+        'countries': countries,
+    }
+
+
 @blueprint.get('/-/by-country/<country_code>/', defaults={'page': 1})
 @blueprint.get('/-/by-country/<country_code>/pages/<int:page>/')
 @templated

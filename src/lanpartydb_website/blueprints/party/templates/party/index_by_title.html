@@ -6,7 +6,7 @@
 <h1>Parties <small>{{ pagination.total }}</small></h1>
 
 <div class="block dim">
-  <small>Ordered by: <span class="accented">date</span> | <a class="disguised" href="{{ url_for('.index_by_title') }}">title</a></small>
+  <small>Ordered by: <a class="disguised" href="{{ url_for('.index_by_date') }}">date</a> | <span class="accented">title</span></small>
 </div>
 
 {% include 'party/_list.html' %}

@@ -83,6 +83,10 @@ a {
   color: var(--color-accent);
 }
 
+a.disguised:not(:hover) {
+  color: currentColor;
+}
+
 a:not(:hover) {
   text-decoration: none;
 }
@@ -452,6 +456,10 @@ table.table--wide {
 
 
 /* misc */
+
+.accented {
+  color: var(--color-accent);
+}
 
 .breadcrumbs {
   margin-bottom: -1rem;
