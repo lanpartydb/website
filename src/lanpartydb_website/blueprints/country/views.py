@@ -2,7 +2,7 @@
 lanpartydb_website.blueprints.country.views
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:Copyright: 2024-2025 Jochen Kupperschmidt
+:Copyright: 2024-2026 Jochen Kupperschmidt
 :License: MIT
 """
 
