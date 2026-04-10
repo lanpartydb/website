@@ -13,8 +13,8 @@
     <tr>
       <td><a href="{{ url_for('party.view', slug=party.slug) }}">{{ party.title }}</a></td>
       <td class="centered">
-      {%- if party.online %}
-        <span title="online">🌐</span>
+      {%- if party.online_only %}
+        <span title="online only">🌐</span>
       {%- elif party.location %}
         {%- with country = countries.get(alpha_2=party.location.country_code) %}
         <span title="{{ country.name }}">{{ country.flag }}</span>
