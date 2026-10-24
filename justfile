@@ -2,7 +2,7 @@ _default:
     @just --list
 
 deps-outdated:
-    uv tree --all-groups --depth 1 --no-dev --outdated
+    uv lock --dry-run --upgrade
 
 freeze:
     uv run flask freeze
