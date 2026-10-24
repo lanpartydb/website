@@ -4,5 +4,5 @@ _default:
 deps-outdated:
     uv tree --all-groups --depth 1 --no-dev --outdated
 
-run:
+serve:
     uv run flask run --debug
