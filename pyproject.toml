@@ -19,7 +19,7 @@ dependencies = [
 ]
 license = "MIT"
 license-files = ["LICENSE"]
-keywords = [ "lanparty" ]
+keywords = ["lanparty"]
 classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -49,7 +49,7 @@ line-ending = "lf"
 [tool.ruff.lint.isort]
 combine-as-imports = true
 force-sort-within-sections = true
-forced-separate = [ "tests" ]
+forced-separate = ["tests"]
 lines-after-imports = 2
 order-by-type = false
 
