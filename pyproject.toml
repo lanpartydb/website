@@ -14,6 +14,7 @@ dependencies = [
     "frozen-flask>=1.0.2",
     "lanpartydb>=0.13.0",
     "pycountry>=26.2.16",
+    "tomlkit>=0.15.2",
 ]
 license = "MIT"
 license-files = ["LICENSE"]
